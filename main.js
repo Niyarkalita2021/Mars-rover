@@ -1,10 +1,14 @@
 canvas = document.getElementById("myCanvas");
 ctx = canvas.getContext("2d");
 
+Mars_images_array = ["mars.1.jfif","mars.2.jfif","mars.3.jpg","mars.4.jpg"]
+random_number = Math.floor(Math.random() * 4);
+console.log(random_number);
+
 rover_width = 100;
 rover_height = 90;
 
-background_image = "mars.jpg";
+background_image = Mars_images_array[random_number]
 rover_image = "rover.png";
 rover_x = 10;
 rover_y = 10;
@@ -40,7 +44,7 @@ function my_keydown(e) {
         left();
         console.log("left");
     }
-    if(keyPressed == '38'){
+    if(keyPressed == '39'){
         right();
         console.log("right");
     }
